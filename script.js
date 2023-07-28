@@ -3,9 +3,9 @@ const birthMonth = document.querySelector('input[name=months]').value;
 const birthYear = document.querySelector('input[name=years]').value;
 const submitBtn = document.querySelector('.svg-arrow');
 
-let userAge = document.querySelector('.year-output').textContent;
+let userAge = document.querySelector('.year-output');
 let userMonth = document.querySelector('.months-output');
-let userDate = document.querySelector('.days-output');
+let userDays = document.querySelector('.days-output');
 
 let date = new Date();
 // new Date() is a javascript method that collects time from your device
@@ -24,14 +24,14 @@ const ageFunction = function() {
     currentMonth = currentMonth + 12;
     currentYear = currentYear - 1;
   }
-  let userBirthDay = currentDay - birthDay;
-  let userBirthMonth = currentMonth - birthMonth;
-  let userAge = currentYear - birthYear;
+   userDays.innerHTML = currentDay - birthDay;
+   userMonth.innerHTML = currentMonth - birthMonth;
+   userAge.innerHTML = currentYear - birthYear;
 
 
   console.log(userAge);
-  console.log(userBirthMonth);
-  console.log(userBirthDay);
+  console.log(userMonth);
+  console.log(userDay);
 
 }
 ageFunction()
