@@ -2,6 +2,7 @@ const birthDay = document.querySelector('input[name=days]').value;
 const birthMonth = document.querySelector('input[name=months]').value;
 const birthYear = document.querySelector('input[name=years]').value;
 const submitBtn = document.querySelector('.svg-arrow');
+const requiredMessage = document.querySelectorAll('.required-msg');
 
 let userAge = document.querySelector('.year-output');
 let userMonth = document.querySelector('.months-output');
@@ -15,6 +16,12 @@ let currentYear = date.getFullYear();
 let month = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
 const ageFunction = function() {
+  if( birthDay ==='' || birthMonth ==='' || birthYear ==='' ) {
+    requiredMessage.innerHTML = "This field is required"; 
+    console.log("this field is required");
+  }
+  else{
+
   if (birthDay > currentDay) {
     currentDay = currentDay + month[currentMonth - 1];
     currentMonth = currentMonth - 1; 
@@ -31,7 +38,8 @@ const ageFunction = function() {
 
   console.log(userAge);
   console.log(userMonth);
-  console.log(userDay);
+  console.log(userDays);
+}
 
 }
 ageFunction()

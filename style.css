@@ -80,6 +80,11 @@ body{
     cursor: pointer;
 }
 
+.required-msg{
+	color: red;
+	font-size: 9px;
+}
+
 #underline-arrow{
     display: grid;
     align-items: center;
