@@ -14,3 +14,13 @@
 # Avoid your project being littered with annoying .DS_Store files!
 .DS_Store
 .prettierignore
+
+
+for (let i = 0; i < month.length; i++) {
+    // const element = array[i];
+    
+    if (birthDay > month[i] || Boolean(birthDay) ) {
+      requiredMessage1.innerHTML = `Must be a valid day`;
+      console.log('Must be a valid day');
+    };
+  }
